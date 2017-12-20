@@ -1,14 +1,16 @@
 
-LEA instruction experiment.
+# tlea
+## Test LEA instruction
 
 Intel 8086 processor includes the instruction:
-LEA = Load Efective Address
+
+	LEA = Load Efective Address
 
 This testing program tries to compare its behaviour with the 
-also available MOV instruction.
+also available _MOV_ instruction.
 
 Result: LEA === MOV
-LEA and MOV instructions produce the same result.
+_LEA_ and _MOV_ instructions produce the same result.
 As proved, none of these instructions depend on the DS register.
 When loading addresses from location labels in as86 assembler, 
 the results of both instructions are affected by ORG locations, 
@@ -25,7 +27,7 @@ Instead, NASM accepts:
 
 	lea	ax, [label_name]
 
-This syntax is confusing since the LEA instruction does imediate data loading.
+This syntax is confusing since the _LEA_ instruction does imediate data loading.
 It does not access memory.
 When using NASM, 
 
@@ -39,6 +41,6 @@ and very different from
 
 	mov	ax, [label_name]
 
-On 8086 (16 bit) the LEA is coded in 4 bytes and the 16 bit imediate MOV is coded in 3 bytes.
+On 8086 (16 bit) the _LEA_ is coded in 4 bytes and the 16 bit imediate _MOV_ is coded in 3 bytes.
 
 
