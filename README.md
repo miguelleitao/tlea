@@ -1,5 +1,5 @@
 
-# tlea - Test LEA instruction
+# __tlea__ - Test LEA instruction
 
 Intel 8086 processor includes the instruction:
 
@@ -7,6 +7,11 @@ Intel 8086 processor includes the instruction:
 
 This testing program tries to compare its behaviour with the 
 also available __MOV__ instruction.
+
+## Usage
+
+	make
+	make	run
 
 ## Result
 __LEA == MOV__
