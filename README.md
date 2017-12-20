@@ -1,6 +1,5 @@
 
-# tlea
-## Test LEA instruction
+# tlea - Test LEA instruction
 
 Intel 8086 processor includes the instruction:
 
@@ -9,9 +8,11 @@ Intel 8086 processor includes the instruction:
 This testing program tries to compare its behaviour with the 
 also available __MOV__ instruction.
 
-Result: LEA === MOV
+## Result
+__LEA == MOV__
+
 __LEA__ and __MOV__ instructions produce the same result.
-As proved, none of these instructions depend on the DS register.
+As proved, none of these instructions depend on the __DS__ register.
 When loading addresses from location labels in AS86 assembler, 
 the results of both instructions are affected by ORG locations, 
 as expected.
