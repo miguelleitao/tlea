@@ -12,6 +12,15 @@ also available __MOV__ instruction.
 
 	make
 	make	run
+	
+__make__ builds a binary file.
+__make__ run creates a disk image file and boots __qemu__ from it.
+Prints to console:
+CS
+IP
+MOV msg
+
+
 
 ## Result
 __LEA == MOV__
