@@ -1,5 +1,5 @@
 
-# __tlea__ - Test LEA instruction
+# tlea - Test LEA instruction
 
 Intel 8086 processor includes the instruction:
 
