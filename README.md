@@ -5,8 +5,12 @@ Intel 8086 processor includes the instruction:
 
 	LEA = Load Efective Address
 
-This testing program tries to compare its behaviour with the 
+This testing program tries to compare the __LEA__ behaviour with the 
 also available __MOV__ instruction.
+
+## Requires
+
+AS86 and QEMU
 
 ## Usage
 
@@ -14,13 +18,21 @@ also available __MOV__ instruction.
 	make	run
 	
 __make__ builds a binary file.
-__make__ run creates a disk image file and boots __qemu__ from it.
+
+__make run__ creates a disk image file and boots __qemu__ from it.
+
 Prints to console:
-CS
-IP
-MOV msg
 
+	CS
+	IP
 
+	MOV msg
+	LEA msg
+	DS
+
+	MOV msg'
+	LEA msg'
+	DS'
 
 ## Result
 __LEA == MOV__
@@ -42,7 +54,7 @@ Instead, NASM accepts:
 
 	lea	ax, [label_name]
 
-This syntax is confusing since the __LEA__ instruction does imediate data loading.
+This syntax is confusing since this form of __LEA__ instruction does imediate data loading.
 It does not access memory.
 When using NASM, 
 
