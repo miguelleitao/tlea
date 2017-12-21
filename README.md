@@ -33,6 +33,11 @@ Prints to console:
 	MOV msg'
 	LEA msg'
 	DS'
+	
+A less relevant 32 bit experiment is also included. This experiment can be run directly in the Linux OS.
+
+	make
+	make run32
 
 ## Result
 __LEA == MOV__
