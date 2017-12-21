@@ -10,6 +10,7 @@
 ##
 ## -----------------------------------------------------------------------
 
+
 ##
 ## Makefile for boot samples
 ##
@@ -39,7 +40,19 @@ LIBS	   = lib/libutil_com.a lib/libcom32.a $(LIBGCC)
 .SUFFIXES: .c .o .elf .c32 .s .bin
 
 
-all: 	tlea.bin 
+all: 	tlea.bin tlea32
+
+.SUFFIXES: .asm .o
+
+.asm.o:
+	nasm -f elf $<
+
+tlea32: tlea32.o
+	ld -m elf_i386 -s -o $@ $^
+
+run32: tlea32
+	./$<
+
 
 disk.img: tlea.bin
 	dd if=/dev/zero of=$@ bs=1k count=2k
@@ -58,7 +71,6 @@ run: disk.img
 %.o: %.S
 	$(CC) $(SFLAGS) -c -o $@ $<
 
-.PRECIOUS: %.o
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
